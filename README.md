@@ -1,4 +1,6 @@
-# EPAR: Extensible Plain-text Archive (.epar) Format
+# EPAR: Extensible Plain-text Archive (.epar) Format Version 0.1
+
+**This document is under development!**
 
 This is a specification of a extensible plain-text archive format.
 
