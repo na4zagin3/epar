@@ -61,6 +61,7 @@ The object can have the following fields:
     - A delimiter must contain more than one character.
     - Neither of the first or the last character of a delimiter should be a space (U+0020).
     - The sequence `<line-break> <line-break> <delimiter>` should not appear anywhere except in `file-section-preamble`s.
+- `defaults:  <object>`: An object representing default options of each file section metadata.
 
 ```bnf
 header-metadata = <yaml-document>
