@@ -23,11 +23,16 @@ A text file with CR line breaks.
 Typically created with Windows.
 
 --- no-line-break-at-end.txt
-line-break-at-end: no
+line-breaks-at-end: 0
 ...
 
-A text file with CR line breaks.
-Typically created with Windows.
+A text file without a trailing line break.
+
+--- excess-line-break-at-end.txt
+line-breaks-at-end: 2
+...
+
+A text file with an excess empty line.
 ```
 
 ## File format
@@ -76,7 +81,7 @@ File Section Metadata is a YAML document representing an YAML Object.
 The object can have the following fields:
 
 - `line-break: CR | LF | CRLF` Line break character. Default value is the same as the archive file.
-- `line-break-at-end: <boolean>` If the file end with a line break. Default value is `yes`.
+- `line-breaks-at-end: <integer>` Number of line breaks at the end of the content. Default value is `1`.
 
 ```bnf
 file-section-metadata ::= <yaml-document>
