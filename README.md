@@ -90,7 +90,12 @@ file-section-metadata ::= <yaml-document>
 
 #### File Section Content
 
-File Section Content is a well-formed code unit sequence in UTF-8.
+File Section Content is a well-formed code unit sequence (in UTF-8).
+Trailing line breaks are not encoded.
+
+```bnf
+file-section-content ::= <file-content> <line-break>*
+```
 
 ### Yaml Document
 
