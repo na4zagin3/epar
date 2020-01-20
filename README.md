@@ -39,7 +39,7 @@ A text file with an excess empty line.
 
 - Both human-readable and human-writable.
 - Simple look for typical usages.
-- Comprehensive as an archive format. For example, EPAR must be able to handle weird filenames and binary files.
+- Comprehensive as an archive format. In other words, EPAR must be able to handle extreme cases as weird filenames, binary files, and sparse files.
 
 ## File format
 
