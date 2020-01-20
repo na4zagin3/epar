@@ -16,7 +16,7 @@ delimiter: "---"
 This is a text file.
 
 --- windows.txt
-line-break: CR
+line-break: cr
 ...
 
 A text file with CR line breaks.
@@ -87,7 +87,7 @@ filename ::= <non-space-character>+ | '"' <yaml:nb-double-one-line> '"' /* See h
 File Section Metadata is a YAML document representing an YAML Object.
 The object can have the following fields:
 
-- `line-break: CR | LF | CRLF` Line break character. Default value is the same as the archive file.
+- `line-break: cr | lf | crlf` Line break character. Default value is the same as the archive file.
 - `line-breaks-at-end: <integer>` Number of line breaks at the end of the content. Default value is `1`.
 
 ```bnf
