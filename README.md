@@ -35,6 +35,12 @@ line-breaks-at-end: 2
 A text file with an excess empty line.
 ```
 
+## Rationals
+
+- Both human-readable and human-writable.
+- Simple look for typical usages.
+- Comprehensive as an archive format. 
+
 ## File format
 
 A EPAR consist of a header, metadata, and file sections.
