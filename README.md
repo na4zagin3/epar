@@ -16,10 +16,10 @@ delimiter: "---"
 This is a text file.
 
 --- windows.txt
-line-break: cr
+line-break: crlf
 ...
 
-A text file with CR line breaks.
+A text file with CRLF line breaks.
 Typically created with Windows.
 
 --- no-line-break-at-end.txt
