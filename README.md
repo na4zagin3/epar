@@ -47,7 +47,7 @@ A EPAR consist of a header, metadata, and file sections.
 File encoding must be UTF-8.
 
 ```bnf
-epar-archive ::= <header> <line-break> <header-metadata> <file-sections>
+epar-archive ::= <header> <line-break> ( <header-metadata> <file-sections>? )?
 ```
 
 ### Header
@@ -70,15 +70,16 @@ The object can have the following fields:
 - `defaults:  <object>`: An object representing default options of each file section metadata.
 
 ```bnf
-header-metadata = <yaml-document>
+header-metadata = <yaml-document> | <line-break>
 ```
 
 
 ### File Section
 
 ```bnf
+file-sections ::= <file-section> ( <line-break> <line-break> <file-section> )*
 file-section ::= <file-section-preamble> <filename> <line-break> <file-section-metadata>? <file-section-content>
-file-section-preamble ::= <line-break> <line-break> <delimiter> <space>
+file-section-preamble ::= <delimiter> <space>
 filename ::= <non-space-character>+ | '"' <yaml:nb-double-one-line> '"' /* See https://yaml.org/spec/1.2/spec.html#nb-double-one-line */
 ```
 
