@@ -83,6 +83,12 @@ file-section-preamble ::= <delimiter> <space>
 filename ::= <non-space-character>+ | '"' <yaml:nb-double-one-line> '"' /* See https://yaml.org/spec/1.2/spec.html#nb-double-one-line */
 ```
 
+The file separator in a filename is `/` regardless of environments, including Windows.
+
+A filename MUST NOT contain current-directory references (i.e., `.`) or parent-directory references (i.e., `..`).  For example, `a/./b.txt` is NOT a valid filename; meanwhile `a/.b.txt` IS a valid filename.
+
+Each file section SHOULD have a unique filename.
+
 #### File Section Metadata
 
 File Section Metadata is a YAML document representing an YAML Object.
